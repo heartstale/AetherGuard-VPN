@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0b1120;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 420px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.plan {
+  background: #2563eb;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.connection-card {
+  background: #111827;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.status-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: red;
+}
+
+.progress-container {
+  height: 6px;
+  background: #1f2937;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #22c55e;
+  transition: width 0.2s;
+}
+
+.info {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.info span:first-child {
+  opacity: 0.6;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  background: #1f2937;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* LOVE SCREEN */
+
+.love-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #ff4d6d, #590d22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.love-content {
+  text-align: center;
+  animation: scaleUp 1s ease forwards;
+}
+
+.heart {
+  font-size: 70px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
