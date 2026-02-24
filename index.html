@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AetherGuard VPN</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css"></link>
 </head>
 <body>
 
-<!-- Анимированный фон -->
+
 <div class="bg-animation"></div>
 
 <div class="app" id="app">
@@ -20,7 +20,6 @@
 
   <div class="card">
 
-    <!-- Статус подключения -->
     <div class="connection-status">
       <div class="status-indicator" id="indicator"></div>
       <div>
@@ -29,14 +28,14 @@
       </div>
     </div>
 
-    <!-- Круг прогресса -->
+
     <div class="circle-wrapper">
       <div class="circle">
         <div class="progress-text" id="progressText">0%</div>
       </div>
     </div>
 
-    <!-- Статистика подключения -->
+    
     <div class="stats">
       <div>Локация: <span id="locationText">Germany</span></div>
       <div>IP: <span id="ipText">—</span></div>
@@ -44,7 +43,7 @@
       <div>Шифрование: AES-256</div>
     </div>
 
-    <!-- Выбор страны -->
+
     <select id="locationSelect">
       <option>Germany</option>
       <option>USA</option>
@@ -53,14 +52,13 @@
       <option>Canada</option>
     </select>
 
-    <!-- Кнопка подключения -->
+
     <button id="connectBtn">Подключиться</button>
 
   </div>
 
 </div>
 
-<!-- Экран признания -->
 <div class="love-screen hidden" id="loveScreen">
   <div class="love-bg"></div>
   <div class="love-card">
