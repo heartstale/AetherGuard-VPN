@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NovaSecure VPN</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AetherGuard VPN</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Анимированный фон -->
+<div class="bg-animation"></div>
+
 <div class="app" id="app">
 
-  <div class="top-bar">
-    <div class="logo">NovaSecure</div>
-    <div class="plan">Premium</div>
+  <div class="nav">
+    <div class="brand">AetherGuard</div>
+    <div class="badge">ULTRA</div>
   </div>
 
-  <div class="connection-card">
+  <div class="card">
 
-    <div class="status-block">
-      <div class="status-dot" id="statusDot"></div>
-      <div class="status-text" id="statusText">Disconnected</div>
+    <!-- Статус подключения -->
+    <div class="connection-status">
+      <div class="status-indicator" id="indicator"></div>
+      <div>
+        <div class="status-title" id="statusTitle">Подключение отключено</div>
+        <div class="status-sub" id="statusSub">Нажмите для подключения к серверу</div>
+      </div>
     </div>
 
-    <div class="progress-container">
-      <div class="progress-bar" id="progressBar"></div>
+    <!-- Круг прогресса -->
+    <div class="circle-wrapper">
+      <div class="circle">
+        <div class="progress-text" id="progressText">0%</div>
+      </div>
     </div>
 
-    <div class="info">
-      <div><span>Location:</span> <span id="locationText">Germany</span></div>
-      <div><span>IP:</span> <span id="ipText">—</span></div>
-      <div><span>Ping:</span> <span id="pingText">—</span></div>
+    <!-- Статистика подключения -->
+    <div class="stats">
+      <div>Локация: <span id="locationText">Germany</span></div>
+      <div>IP: <span id="ipText">—</span></div>
+      <div>Ping: <span id="pingText">—</span></div>
+      <div>Шифрование: AES-256</div>
     </div>
 
+    <!-- Выбор страны -->
     <select id="locationSelect">
       <option>Germany</option>
-      <option>United States</option>
+      <option>USA</option>
       <option>France</option>
       <option>Japan</option>
       <option>Canada</option>
     </select>
 
-    <button id="connectBtn">Connect</button>
+    <!-- Кнопка подключения -->
+    <button id="connectBtn">Подключиться</button>
 
   </div>
 
 </div>
 
-<!-- LOVE SCREEN -->
+<!-- Экран признания -->
 <div class="love-screen hidden" id="loveScreen">
-  <div class="love-content">
-    <div class="heart">❤️</div>
-    <h1>Secure Connection Established</h1>
+  <div class="love-bg"></div>
+  <div class="love-card">
+    <div class="big-heart">❤️</div>
+    <h1>Подключение установлено</h1>
     <p>
-      Connected to: <strong>Your Heart</strong><br>
-      Encryption: Infinite Love Protocol<br>
-      Latency: 0ms (because we’re synced)<br><br>
-      I choose you. Every time.
+      Соединение с самым важным сервером завершено.<br><br>
+      Сервер: <strong>Твоё сердце</strong><br>
+      Протокол: Бесконечная любовь<br>
+      Статус: Всегда рядом<br><br>
+      Я тебя люблю. И это не временная сессия.
     </p>
   </div>
 </div>
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
